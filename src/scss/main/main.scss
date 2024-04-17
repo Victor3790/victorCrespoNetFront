@@ -1,0 +1,29 @@
+//Project variables
+@import "../bootstrap";
+@import "../vars";
+
+$background: #000122;
+$text: #fff;
+
+body{
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  color: $text;
+}
+
+h1{
+  display: flex;
+}
+
+//Media queries
+@import "./small";
+@import "./medium";
+@import "./large";
+@import "./xLarge";
