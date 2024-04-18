@@ -1,0 +1,40 @@
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+    /** Hero **/
+    .hero 
+    {
+        height: 600px;
+        padding-top: 0;
+    }
+
+    .hero__title
+    {
+        font-size: 3rem;
+    }
+
+    .hero__subtitle
+    {
+        font-size: 2rem;
+    }
+
+    .hero-background 
+    {
+        height: 600px;
+    }
+
+    .hero__pic-container
+    {
+        position: static;
+    }
+
+    .hero__pic 
+    {
+        fill: #f3f3f31a;
+    }
+
+    /** About **/
+    .about__pic
+    {
+        width: 100%;
+    }
+}

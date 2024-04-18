@@ -1,0 +1,108 @@
+//Project variables
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "../vars";
+
+/*** Hero ***/
+.hero 
+{
+    color: $white;
+    width: 100%;
+    background-color: $blue;
+    height: 100vh;
+}
+
+.hero__container 
+{
+    height: 100%;
+}
+
+.hero__row
+{
+    height: 100%;
+}
+
+.hero__title
+{
+    font-size: 2.5rem;
+}
+
+.hero__subtitle
+{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.hero__text-container
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.hero__pic-container
+{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    max-width: 540px;
+}
+
+.hero__pic 
+{
+    width: 100%;
+    fill: #f3f3f30d;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.hero__cta
+{
+    width: 150px;
+}
+
+/** About **/
+.about
+{
+    background-color: transparent;
+}
+
+.about__text-container
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.about__pic
+{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/** Services **/
+.services
+{
+    background-color: $white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.services__icon
+{
+    width: 110px;
+    margin: 0 auto;
+    display: block;
+}
+
+//Media queries
+@import "./small";
+@import "./medium";
+@import "./large";
+@import "./xLarge";
