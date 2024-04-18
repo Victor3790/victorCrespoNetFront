@@ -10,6 +10,7 @@
 {
     color: $white;
     width: 100%;
+    min-width: 390px;
     background-color: $blue;
     height: 100vh;
 }
@@ -92,6 +93,7 @@
     background-color: $white;
     padding-top: 25px;
     padding-bottom: 25px;
+    min-width: 390px;
 }
 
 .services__icon

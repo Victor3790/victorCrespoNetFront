@@ -1,0 +1,7 @@
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+    .post__title
+    {
+        font-size: 3rem;
+    }
+}

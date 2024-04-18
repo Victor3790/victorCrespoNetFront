@@ -2,7 +2,10 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: [/*path.resolve(__dirname,'src/entry.js'),*/path.resolve(__dirname,'src/devEntry.js')],
+  entry: {
+    index: [path.resolve(__dirname,'src/devEntry.js')],
+    post:  [path.resolve(__dirname,'src/devPostEntry.js')]
+  },
   mode: 'development',
   devServer: {
     hot: true
@@ -37,8 +40,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Dev',
-      template: path.resolve(__dirname,'src/index.html')
+      template: path.resolve(__dirname,'src/index.html'),
+      chunks: ['index'],
+      filename: './index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname,'src/post.html'),
+      chunks: ['post'],
+      filename: './post.html'
     })
   ]
 };
