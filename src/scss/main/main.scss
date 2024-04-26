@@ -5,6 +5,10 @@
 
 @import "../vars";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container
 {
     min-width: 390px;
@@ -30,6 +34,16 @@
     color: $blue;
     border-radius: 5px;
     text-align: center;
+}
+
+a.button
+{
+    text-decoration: none;
+}
+
+a.button:hover
+{
+    color: $blue;
 }
 
 .footer

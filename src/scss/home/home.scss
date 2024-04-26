@@ -12,7 +12,7 @@
     width: 100%;
     min-width: 390px;
     background-color: $blue;
-    height: 100vh;
+    height: 600px;
 }
 
 .hero__container 
@@ -28,12 +28,14 @@
 .hero__title
 {
     font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 .hero__subtitle
 {
     font-size: 1.5rem;
     font-weight: lighter;
+    text-transform: uppercase;
 }
 
 .hero__text-container
@@ -42,6 +44,7 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .hero__pic-container
@@ -50,6 +53,7 @@
     position: absolute;
     height: 100%;
     max-width: 540px;
+    z-index: 1;
 }
 
 .hero__pic 
