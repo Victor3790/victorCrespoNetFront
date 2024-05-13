@@ -104,6 +104,30 @@
     display: block;
 }
 
+.services__title
+{
+    text-align: center;
+    font-size: 1.23rem;
+}
+
+.services__text
+{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/** Social proof **/
+.testimonials__cta
+{
+    margin-top: 30px;
+    width: 160px;
+}
+
+.testimonials__name
+{
+    font-size: 0.9rem;
+}
+
 //Media queries
 @import "./small";
 @import "./medium";
