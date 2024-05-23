@@ -24,12 +24,13 @@
 
     .hero__pic-container
     {
-        position: static;
+        position: relative;
+        height: 100%;
     }
 
     .hero__pic 
     {
-        width: 85%;
+        width: 385px;
     }
 
     /** About **/
