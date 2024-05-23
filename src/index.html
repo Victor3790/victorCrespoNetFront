@@ -184,8 +184,8 @@
     /*** Hero animations ***/
     let wpLogo = document.querySelector('.hero__pic');
 
-    window.addEventListener("load", (e) => {
-        wpLogo.classList.add('animate-logo');
+    window.addEventListener("DOMContentLoaded", (e) => {
+        wpLogo.classList.add('animate');
     });
 
     /*** About animations ***/
@@ -197,7 +197,7 @@
             entries.forEach((entry) => {
                 if(entry.isIntersecting && !mePicDrawn) {
                     // Show pic
-                    me.classList.add('animate-me');
+                    me.classList.add('animate');
                 }
             });
         },
