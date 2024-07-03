@@ -5,13 +5,20 @@
 
 @import "../vars";
 
+.home-icon
+{
+    width: 110px;
+    margin: 0 auto;
+    display: block;
+}
+
 /*** Hero ***/
 .hero 
 {
-    color: $white;
+    color: var(--white);
     width: 100%;
+    background-color: var(--blue);
     min-width: 390px;
-    background-color: $blue;
 }
 
 .hero__container 
@@ -28,6 +35,8 @@
 {
     font-size: 2.5rem;
     text-transform: uppercase;
+    border-left: 2.5px solid var(--yellow);
+    padding-left: 15px;
 }
 
 .hero__subtitle
@@ -51,6 +60,7 @@
     justify-content: center;
     align-items: center;
     height: 300px;
+    margin-top: 40px;
 }
 
 .hero__pic 
@@ -103,17 +113,9 @@
 /** Services **/
 .services
 {
-    background-color: $white;
+    background-color: var(--white);
     padding-top: 25px;
     padding-bottom: 25px;
-    min-width: 390px;
-}
-
-.services__icon
-{
-    width: 110px;
-    margin: 0 auto;
-    display: block;
 }
 
 .services__title
@@ -135,9 +137,28 @@
     width: 160px;
 }
 
+.testimonials__text
+{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .testimonials__name
 {
     font-size: 0.9rem;
+}
+
+/** Contact **/
+.contact
+{
+    background-color: var(--white);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.contact__mail
+{
+    width: 250px;
 }
 
 /** Animations **/

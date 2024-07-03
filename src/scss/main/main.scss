@@ -5,6 +5,12 @@
 
 @import "../vars";
 
+:root {
+    --white: #f3f3f3;
+    --yellow: #fcb700;
+    --blue: #032253;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,22 +23,52 @@ html {
 .section 
 {
     margin-top: 30px;
+    min-width: 390px;
 }
 
 .title 
 {
-    color: $blue;
+    color: var(--blue);
     font-size: 1.5rem;
     text-transform: uppercase;
     margin-bottom: 30px;
+    border-left: 3px solid var(--yellow);
+    padding-left: 10px;
+}
+
+.menu
+{
+    background-color: var(--blue);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    z-index: 9999;
+}
+
+.menu__list
+{
+    list-style: none;
+}
+
+.footer__title
+{
+    font-size: 1.25rem;
+}
+
+.white-text
+{
+    color: var(--white)!important;
 }
 
 .button
 {
     padding: 10px 20px;
-    background-color: $yellow;
-    color: $blue;
-    border-radius: 5px;
+    background-color: var(--yellow);
+    color: var(--blue);
     text-align: center;
     display: block;
 }
@@ -44,14 +80,26 @@ a.button
 
 a.button:hover
 {
-    color: $blue;
+    color: var(--blue);
 }
 
 .footer
 {
-    background-color: $blue;
-    color: $white;
+    background-color: var(--blue);
+    color: var(--white);
     min-width: 390px;
+}
+
+.footer__icon
+{
+    fill: var(--white);
+    width: 30px;
+    margin-right: 20px;
+}
+
+.footer__icon-link
+{
+    text-decoration: none;
 }
 
 //Media queries
