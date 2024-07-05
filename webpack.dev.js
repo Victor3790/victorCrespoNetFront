@@ -6,6 +6,7 @@ module.exports = {
     index: [path.resolve(__dirname,'src/devEntry.js')],
     post:  [path.resolve(__dirname,'src/devPostEntry.js')],
     archive: [path.resolve(__dirname,'src/devArchiveEntry.js')],
+    notFound: [path.resolve(__dirname,'src/dev404Entry.js')],
   },
   mode: 'development',
   devServer: {
@@ -54,6 +55,11 @@ module.exports = {
       template: path.resolve(__dirname,'src/archive.html'),
       chunks: ['archive'],
       filename: './archive.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname,'src/404.html'),
+      chunks: ['notFound'],
+      filename: './404.html'
     })
   ]
 };
