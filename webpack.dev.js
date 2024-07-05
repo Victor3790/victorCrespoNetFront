@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: {
     index: [path.resolve(__dirname,'src/devEntry.js')],
-    post:  [path.resolve(__dirname,'src/devPostEntry.js')]
+    post:  [path.resolve(__dirname,'src/devPostEntry.js')],
+    archive: [path.resolve(__dirname,'src/devArchiveEntry.js')],
   },
   mode: 'development',
   devServer: {
@@ -48,6 +49,11 @@ module.exports = {
       template: path.resolve(__dirname,'src/post.html'),
       chunks: ['post'],
       filename: './post.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname,'src/archive.html'),
+      chunks: ['archive'],
+      filename: './archive.html'
     })
   ]
 };

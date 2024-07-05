@@ -10,7 +10,8 @@ module.exports = {
       bootstrap: [path.resolve(__dirname,'src/wp/bootstrap.js')],
       main: [path.resolve(__dirname,'src/wp/main.js')],
       home: [path.resolve(__dirname,'src/wp/home.js')],
-      post: [path.resolve(__dirname,'src/wp/post.js')]
+      post: [path.resolve(__dirname,'src/wp/post.js')],
+      archive: [path.resolve(__dirname,'src/wp/archive.js')]
     },
     output: {
       filename: '[name].js',

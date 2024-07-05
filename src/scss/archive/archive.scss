@@ -1,0 +1,50 @@
+//Project variables
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "../vars";
+
+/*** Individual posts ***/
+.post {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.post__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+.post__title:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.post__thumbnail {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+/*** Pagination ***/
+.page {
+    font-size: 1.30rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.page:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+//Media queries
+@import "./small";
+@import "./medium";
+@import "./large";
+@import "./xLarge";
