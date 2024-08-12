@@ -7,8 +7,6 @@
 
 /*** Individual posts ***/
 .post {
-    max-width: 300px;
-    margin: 0 auto;
     margin-bottom: 50px;
 }
 
@@ -24,10 +22,8 @@
     text-decoration: underline;
 }
 
-.post__thumbnail {
-    display: block;
-    width: 100%;
-    max-width: 300px;
+.post__excerpt {
+    font-size: 0.9rem;
 }
 
 /*** Pagination ***/

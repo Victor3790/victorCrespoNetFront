@@ -11,7 +11,8 @@ module.exports = {
       main: [path.resolve(__dirname,'src/wp/main.js')],
       home: [path.resolve(__dirname,'src/wp/home.js')],
       post: [path.resolve(__dirname,'src/wp/post.js')],
-      archive: [path.resolve(__dirname,'src/wp/archive.js')]
+      archive: [path.resolve(__dirname,'src/wp/archive.js')],
+      sidebar: [path.resolve(__dirname, 'src/wp/sidebar.js')]
     },
     output: {
       filename: '[name].js',

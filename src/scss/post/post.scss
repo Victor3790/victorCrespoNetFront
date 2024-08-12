@@ -30,29 +30,6 @@ h3
     color: var(--white);
 }
 
-// Sidebar
-.sidebar
-{
-    background-color: var(--white);
-}
-
-.sidebar__title
-{
-    color: var(--blue);
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    border-left: 3px solid var(--yellow);
-    padding-left: 10px;   
-}
-
-.sidebar__link
-{
-    text-decoration: none;
-    color: #000;
-}
-
 // Breadcrumbs
 .post__breadcrumbs
 {
