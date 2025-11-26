@@ -1,65 +1,77 @@
+'use strict'
+
 const path = require('path')
+const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: {
     index: [path.resolve(__dirname,'src/devEntry.js')],
     post:  [path.resolve(__dirname,'src/devPostEntry.js')],
     archive: [path.resolve(__dirname,'src/devArchiveEntry.js')],
     notFound: [path.resolve(__dirname,'src/dev404Entry.js')],
   },
-  mode: 'development',
+  /*output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist')
+  },*/
   devServer: {
-    hot: true
+    open: true,
+    hot: true,
   },
+  plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html' }),
+    new HtmlWebpackPlugin({ template: './src/post.html', filename: 'post.html' }),
+    new HtmlWebpackPlugin({ template: './src/archive.html', filename: 'archive.html' }),
+    new HtmlWebpackPlugin({ template: './src/404.html', filename: '404.html' }),
+  ],
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-      },
-      {
-        test: /\.html$/,
-        use: [ {loader:'html-loader-srcset'} ]
-      },
-      {
-        test: /\.(svg|png|jpg|gif)$/,
-        use: ['file-loader']
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(scss)$/,
         use: [
           {
-            loader: 'file-loader',
+            // Adds CSS to the DOM by injecting a `<style>` tag
+            loader: 'style-loader',
+          },
+          {
+            // Interprets `@import` and `url()` like `import/require()` and will resolve them
+            loader: 'css-loader'
+          },
+          {
+            // Loader for webpack to process CSS with PostCSS
+            loader: 'postcss-loader',
             options: {
-              name: '[name].[ext]',
-              //outputPath: 'fonts/'
+              postcssOptions: {
+                plugins: [
+                  autoprefixer
+                ]
+              }
+            }
+          },
+          {
+            // Loads a SASS/SCSS file and compiles it to CSS
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                // Optional: Silence Sass deprecation warnings. See note below.
+                silenceDeprecations: [
+                  //'mixed-decls',
+                  'color-functions',
+                  'global-builtin',
+                  'import'
+                ],
+              }
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+     },
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'src/index.html'),
-      chunks: ['index'],
-      filename: './index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'src/post.html'),
-      chunks: ['post'],
-      filename: './post.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'src/archive.html'),
-      chunks: ['archive'],
-      filename: './archive.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'src/404.html'),
-      chunks: ['notFound'],
-      filename: './404.html'
-    })
-  ]
-};
+  target: 'web',
+}
